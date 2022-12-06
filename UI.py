@@ -28,5 +28,6 @@ class UI(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    w = UI()
+    #w = UI()
+    PDF('Test.pdf')
     app.exec()
