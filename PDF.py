@@ -32,4 +32,5 @@ COSE DA FARE:
 - Numerare le foto in base all'indice che va da 0 al numero della foto. 
 - Trovare un modo per ripulire prima le foto dalle note e solo dopo scattare la foto della slide, ovviamente le note non devono andare perse.
 - Mettere il tutto in ordine su un file word.
+- Comprimere le immagini
 '''
