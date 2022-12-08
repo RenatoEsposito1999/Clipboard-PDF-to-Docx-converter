@@ -25,4 +25,4 @@ if __name__ == '__main__':
     #app = QtWidgets.QApplication(sys.argv)
     #w = UI()
     PDF('./Test.pdf')
-    app.exec()
+    #app.exec()
