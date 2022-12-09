@@ -30,4 +30,6 @@ COSE DA FARE:
 - Trovare un modo per ripulire prima le foto dalle note e solo dopo scattare la foto della slide, ovviamente le note non devono andare perse.
 - Mettere il tutto in ordine su un file word.
 - Comprimere le immagini
+- Rendere come parametri di input sia il size delle foto che la scelta di cancellare gli appunti dalle foto, quindi prima di fare la foto si cancellano gli appunti
+chiaramente non si salverà il PDF qvecchio quindi non li perdono dalla versione del vecchio. 
 '''
