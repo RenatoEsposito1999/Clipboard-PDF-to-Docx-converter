@@ -1,5 +1,5 @@
 import sys
-from PDF import PDF
+from PdfController import PdfController
 '''
     Sistemare il layout della UI, capire bene come funziona la gerarchia e come conviene 
     operare in PyQT5.
@@ -24,5 +24,6 @@ class UI(QtWidgets.QMainWindow):
 if __name__ == '__main__':
     #app = QtWidgets.QApplication(sys.argv)
     #w = UI()
-    PDF('./Presentation1.pdf')
+    converter =  PdfController('./Test.pdf')
+    converter.convert()
     #app.exec()
