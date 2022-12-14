@@ -9,8 +9,9 @@ class PDF:
         #For each page of the pdf
         for page in _doc:
             for annot in page.annots():
-                print(annot.get_textbox(Annot.rect))
-                print(f"La nota eliminata e'. {page.delete_annot(annot)}")
+                #print(annot.get_textbox(Annot.rect))
+                print(page.clean_contents())
+                #print(f"La nota eliminata e'. {page.delete_annot(annot)}")
         _doc.save('UpdatedPDF.pdf')
         i = 0
         '''
