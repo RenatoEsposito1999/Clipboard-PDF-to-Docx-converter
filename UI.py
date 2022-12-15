@@ -25,5 +25,5 @@ if __name__ == '__main__':
     #app = QtWidgets.QApplication(sys.argv)
     #w = UI()
     converter =  PdfController('./Test.pdf')
-    converter.convert()
+    converter.convert(False)
     #app.exec()
