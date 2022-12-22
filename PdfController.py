@@ -23,17 +23,6 @@ class PdfController:
                         page.delete_annot(annot)
             self.__InsertPhoto(page)                
         self.__closeDoc()
-        '''
-        Riesco a ricavare le foto delle pagine.
-        i = 0
-        for page in _doc:
-            pix = page.get_pixmap()  # render page to an image
-            #pix.save(f"page_{i}.png")
-            i+=1
-            self.__DocxController.InsertPhoto(page.get_pixmap()) 
-
-        exit()
-        '''
 
     def __InsertText(self,txt):
         self.__DocxController.InsertText(txt)

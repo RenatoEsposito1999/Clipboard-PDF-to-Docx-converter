@@ -24,6 +24,6 @@ class UI(QtWidgets.QMainWindow):
 if __name__ == '__main__':
     #app = QtWidgets.QApplication(sys.argv)
     #w = UI()
-    converter =  PdfController('./Test.pdf')
+    converter =  PdfController('./Lezione 3.pdf')
     converter.convert(False)
     #app.exec()
