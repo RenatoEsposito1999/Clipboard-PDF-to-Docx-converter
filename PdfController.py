@@ -4,12 +4,13 @@ class PdfController:
     #The pdf file reader
     __PDFdoc = None
     __DocxController = None
+    __orig_doc = None
     def __init__(self,path):
-        _orig_doc =  fitz.open(path)
+        self.__orig_doc =  fitz.open(path)
         self.__PDFdoc = fitz.Document()
         #I work with one copy to avoid breakage
-        self.__PDFdoc.insert_pdf(_orig_doc)
-        self.__DocxController = DocxController(_orig_doc.name)
+        self.__PDFdoc.insert_pdf(self.__orig_doc)
+        self.__DocxController = DocxController(self.__orig_doc.name)
 
 
 
@@ -39,11 +40,13 @@ class PdfController:
 
     def __InsertPhoto(self,page):
         pix = page.get_pixmap()
-        pix.save(f"page_{page.number}.png")
+        name = f"page_{page.number}.png"
+        pix.save(name)
+        self.__DocxController.InsertPhoto(name)
 
     def __closeDoc(self):
         self.__PDFdoc.close()
-        self._orig_doc.close()
+        self.__orig_doc.close()
         self.__DocxController.Save()
         
         
