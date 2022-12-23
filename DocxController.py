@@ -1,8 +1,8 @@
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt
-import os
 import re
+import os
 
 class DocxController:
     __doc = None
@@ -14,9 +14,6 @@ class DocxController:
         self.__doc.add_heading(os.path.basename(re.sub(".docx","",self.__title)),level = 0)
         
 
-
-
-        
 
     def InsertText(self,text):
         p = self.__doc.add_paragraph().add_run(text)
@@ -31,4 +28,6 @@ class DocxController:
     def Save(self):
         print(self.__title)
         self.__doc.save(self.__title)
+        #Verificare sempre che il save porta a file non duplicati altrimenti potrebbero esserci dei problemi di sovrascrittura.
+
 

@@ -1,17 +1,20 @@
 import fitz
 from DocxController import DocxController
+import os
 class PdfController:
     #The pdf file reader
     __PDFdoc = None
     __DocxController = None
     __orig_doc = None
     def __init__(self,path):
+        if (not path.lower().endswith('.pdf')) or (not os.path.exists(path)):
+            raise Exception()
         self.__orig_doc =  fitz.open(path)
         self.__PDFdoc = fitz.Document()
         #I work with one copy to avoid breakage
         self.__PDFdoc.insert_pdf(self.__orig_doc)
         self.__DocxController = DocxController(self.__orig_doc.name)
-
+        
 
 
     def convert(self, cleanAnnot = True):
@@ -42,11 +45,7 @@ class PdfController:
 
 '''
 SITUAZIONE ATTUALE:
-Allora stato attuale riesco a differenziare i disegni dalle annotazioni scritte. Ora devo caricarli sul file word
 COSE DA FARE:
-- Modificare il size delle foto da codice (in futuro sarà un parametro dell'app)
-- Rendere come parametri di input sia il size delle foto che la scelta di cancellare gli appunti dalle foto, quindi prima di fare la foto si cancellano gli appunti
+- Rendere come parametri di input la scelta di cancellare gli appunti dalle foto, quindi prima di fare la foto si cancellano gli appunti
 chiaramente non si salverà il PDF qvecchio quindi non li perdono dalla versione del vecchio. 
-- Verificare che il documento sia un .pdf
-- Verificare sempre che il save porta a file non duplicati altrimenti potrebbero esserci dei problemi di sovrascrittura.
 '''
