@@ -1,3 +1,5 @@
+
+'''
 import sys
 from PdfController import PdfController
 
@@ -5,7 +7,6 @@ class UI():
     def __init__(self):
         #TODO   
 
-'''
     #BROWSER BUTTON
         button = QPushButton('Browse',self)
         button.clicked.connect(self.browsefiles)

@@ -40,12 +40,3 @@ class PdfController:
         self.__PDFdoc.close()
         self.__orig_doc.close()
         self.__DocxController.Save()
-        
-        
-
-'''
-SITUAZIONE ATTUALE:
-COSE DA FARE:
-- Rendere come parametri di input la scelta di cancellare gli appunti dalle foto, quindi prima di fare la foto si cancellano gli appunti
-chiaramente non si salverà il PDF qvecchio quindi non li perdono dalla versione del vecchio. 
-'''
