@@ -26,12 +26,11 @@ class DocxController:
         self.__doc.add_picture(imageName, width = Inches(6.61), height = Inches(3.9))
         os.remove("./"+imageName)
 
-#CONTROLLARE SE GIA' ESISTE. 
+#optional parameters are required for the case where it is not batch
     def Save(self, batch = False, folder = None):
-        #Qui dovrei creare una cartella dove salvo i docx.
         if batch:
             if os.path.isdir(folder+"DOCX"):
-                print(folder + "DOCX" + self.__title.replace(folder,""))
+                print("Save in ", folder + "DOCX/" + self.__title.replace(folder,""))
                 self.__doc.save(folder + "DOCX/" + self.__title.replace(folder,""))
             else:
                 os.mkdir(folder+"DOCX")

@@ -8,10 +8,11 @@ if __name__ == '__main__':
         #w = UI()
         try:
             converter =  PdfController('./PDF/Lezione 3.pdf')
-        except:
-            print("Non-existent file or wrong extension\n")
+        except OSError as error:
+            print(error)
             exit()
         converter.convert()
         #app.exec()
     else:
         batchController = BatchPdfController('./PDF/')
+        batchController.convert()
