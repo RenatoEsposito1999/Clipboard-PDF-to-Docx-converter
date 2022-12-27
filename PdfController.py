@@ -6,6 +6,7 @@ class PdfController:
     __PDFdoc = None
     __DocxController = None
     __orig_doc = None
+    __path = None
     def __init__(self,path):
         if (not path.lower().endswith('.pdf')) or (not os.path.exists(path)):
             raise Exception()
@@ -14,18 +15,17 @@ class PdfController:
         #I work with one copy to avoid breakage
         self.__PDFdoc.insert_pdf(self.__orig_doc)
         self.__DocxController = DocxController(self.__orig_doc.name)
-        
 
-
-    def convert(self, cleanAnnot = True):
+    #CleanAnnot = false converter don't clear the annotations.
+    def convert(self, cleanAnnot = False, batch = False, folder = None):
         for page in self.__PDFdoc: #For each page of the pdf
             for annot in page.annots():
                 if annot.info['content']: #content is not null when has text
                     self.__InsertText(annot.info['content'])
                     if cleanAnnot: #User wants to delete notes on images in docx 
                         page.delete_annot(annot)
-            self.__InsertPhoto(page)                
-        self.__closeDoc()
+            self.__InsertPhoto(page)                    
+        self.__closeDoc(batch,folder)
 
     def __InsertText(self,txt):
         self.__DocxController.InsertText(txt)
@@ -36,7 +36,13 @@ class PdfController:
         pix.save(name)
         self.__DocxController.InsertPhoto(name)
 
-    def __closeDoc(self):
+    def __closeDoc(self,batch,folder):
         self.__PDFdoc.close()
         self.__orig_doc.close()
-        self.__DocxController.Save()
+        self.__DocxController.Save(batch,folder)
+
+        
+        
+                
+
+
