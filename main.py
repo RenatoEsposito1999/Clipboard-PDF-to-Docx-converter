@@ -1,6 +1,7 @@
 from PdfController import PdfController
 from BatchPdfController import BatchPdfController
 import os
+import sys
 if __name__ == '__main__':
     batch = True
     if not batch:
