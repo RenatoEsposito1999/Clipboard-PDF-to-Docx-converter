@@ -3,11 +3,14 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import sys
 
-class UI:
-    def __init__(self) -> None:
+class UI(QWidget):
+    def __init__(self):
         app = QApplication(sys.argv)
-        window = QWidget()
-        window.setWindowTitle("University Tool Helper")
-        window.show()
+        super(UI,self).__init__()
+        self.setWindowTitle("University Tool Helper")
+        
+        grid = QGridLayout()
+
+        self.setLayout(grid)
+        self.show()
         sys.exit(app.exec())
-    

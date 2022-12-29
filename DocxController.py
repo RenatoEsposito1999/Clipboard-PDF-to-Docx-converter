@@ -2,7 +2,7 @@ import os
 import re
 
 from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+#from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt
 
 
@@ -30,7 +30,6 @@ class DocxController:
     def Save(self, batch = False, folder = None):
         if batch:
             if os.path.isdir(folder+"DOCX"):
-                print("Save in ", folder + "DOCX/" + self.__title.replace(folder,""))
                 self.__doc.save(folder + "DOCX/" + self.__title.replace(folder,""))
             else:
                 os.mkdir(folder+"DOCX")
