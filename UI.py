@@ -11,7 +11,9 @@ class UI(QWidget):
         app = QApplication(sys.argv)
         super(UI,self).__init__()
         self.setWindowTitle("University Tool Helper")
-        
+        self.setFixedWidth(500)
+        self.setFixedHeight(500)
+
         layout = QGridLayout()
         # Add all the components of UI
         self.__addComponent(layout)
@@ -29,10 +31,17 @@ class UI(QWidget):
         pathButton.clicked.connect(self.__getPath)
         layout.addWidget(pathButton)
 
+        #Start Button
         startButton = QPushButton("Start")
         startButton.clicked.connect(self.__start)
-
         layout.addWidget(startButton)
+        
+
+        #Progress bar
+        progressBar = QProgressBar(self)
+        layout.addWidget(progressBar)
+
+        
 
 
 
