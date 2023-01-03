@@ -2,8 +2,8 @@ import os
 import re
 
 from docx import Document
-#from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt
+
 
 
 class DocxController:

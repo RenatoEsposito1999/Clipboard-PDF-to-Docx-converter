@@ -1,8 +1,9 @@
 from PdfController import PdfController
 from BatchPdfController import BatchPdfController
 
-class EntryPoint:
+class EntryPoint(): 
     def __init__(self,path,batch) -> None:
+       
         if not batch:
             try:
                 converter =  PdfController(path)
