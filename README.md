@@ -49,7 +49,9 @@ Anyone who wants to update the graphical interface is welcome, all they have to 
 
 - **The first checkbox**: if checked it will be possible to select an entire folder. This will be inspected and will convert all pdf's inside.
 - **The first checkbox**: if checked it will delete the clipboard from the pdf page before taking the screenshot. (**WARNING: this option will not modify the original pdf in any way so the notes will continue to be there at the end of the process**)
-
+- **The third element**: allows you to select the pdf/folder containing the pdfs.
+- ** The fourth element**: start the conversion process. (**WARNING**: if the file extension is not pdf the process will do nothing)
+- **The last element**: is a bar that indicates the progress of the process.
 ### How to install all the necessary libraries
 In order to do this, it is necessary to go from the terminal to the "PDF-to-Docx-converter-with-annotations" folder and type the command:
 
