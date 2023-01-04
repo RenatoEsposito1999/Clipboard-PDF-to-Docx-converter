@@ -9,13 +9,13 @@ class BatchPdfController(PdfController):
         for file in os.listdir(path):
             if (path+file).lower().endswith('.pdf'):
                 self.__Batch.append(file)
-                
+        
 
 
     def convert(self, cleanAnnot=False):
         for file in self.__Batch:
             try:
-                super().__init__(self.__folder+file)
+                super().__init__(self.__folder+"/"+file)
             except OSError as error:
                 print("Batch" + error)
             self._PdfController__scan(cleanAnnot)

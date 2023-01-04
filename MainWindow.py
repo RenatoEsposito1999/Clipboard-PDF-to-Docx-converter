@@ -1,44 +1,53 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from PyQt5 import QtGui
+from PyQt5 import QtCore
 from EntryPoint import EntryPoint
-import sys
-
-
 class MainWindow(QWidget):
     __path = None
     __progressBar = None
     __isFolder = False
+    __browse = None
+    __IsFolderBox = None
+    __clearAnnots = False
     __components = []
-
     def __init__(self):
-        app = QApplication(sys.argv)
         super(MainWindow,self).__init__()
         self.setWindowTitle("University Tool Helper")
-        self.setFixedWidth(500)
-        self.setFixedHeight(500)
-        self.setWindowIcon(QtGui.QIcon("./img/logo.jpg"))
+        self.setFixedWidth(300)
+        self.setFixedHeight(300)
         layout = QGridLayout()
         #Add all the components of UI
         self.__addComponent(layout)
-        self.setLayout(layout)
+        self.setLayout( layout)
         self.show()
-        sys.exit(app.exec())
-
     def __addComponent(self, layout):
         self.__setFolderBox()
+        self.___setClearAnnots()
         self.__setPathButton()
         self.__setConvertButton()
         self.__setProgressiveBar()
+        
 
         for UIobj in self.__components:
             layout.addWidget(UIobj)
+
+    def ___setClearAnnots(self):
+        #Check Box for clear annotations
+        checkbox = QCheckBox("Clean up pdf annotations on word images \n(This action will not touch\n the original pdf in any way)",self)
+        checkbox.clicked.connect(self.__changeClearAnnots)
+        self.__components.append(checkbox)
+
+
+    def __changeClearAnnots(self):
+        self.__clearAnnots = False if self.__clearAnnots else True
 
 
     def __setProgressiveBar(self):
         #Progress bar
         self.__progressBar = QProgressBar(self)
+        self.__progressBar.setFixedSize(QtCore.QSize(230, 30))
+
         self.__progressBar.setValue(0)
         self.__components.append(self.__progressBar)
         #I Create a thread to handle the updating
@@ -46,45 +55,71 @@ class MainWindow(QWidget):
     def __setConvertButton(self):
         #Start Button
         convertButton = QPushButton("Convert")
+        convertButton.setFixedSize(QtCore.QSize(230, 30))
         convertButton.clicked.connect(self.__start)
         self.__components.append(convertButton)
 
     def __setFolderBox(self):
         #Add checkbox(is folder or single file)
-        IsFolderBox = QCheckBox("Convert an entire folder of pdf",self)
-        IsFolderBox.stateChanged.connect(self.__changeComponent)
-        self.__components.append(IsFolderBox)
+        self.__IsFolderBox = QCheckBox("Convert an entire path",self)
+        self.__IsFolderBox.stateChanged.connect(self.__changeComponent)
+        self.__components.append(self.__IsFolderBox)
     
     def __setPathButton(self):
         #Add push button
-        pathButton = QPushButton("Indicate the path of the file")
-        pathButton.clicked.connect(self.__getPath)
-        self.__components.append(pathButton)
+        self.__browse = QPushButton("Indicate the path of the file")
+        self.__browse.clicked.connect(self.__getPath)
+
+        self.__browse.setFixedSize(QtCore.QSize(230, 30))
+        self.__components.append(self.__browse)
 
 
     # Function to load Path 
     def __getPath(self):
-        path = QFileDialog.getOpenFileName(self,'Indicate the path of the file/folder')
-        self.__path = path[0]
 
-    #cambiare componenti quando il checkbox è fleggato
+        if not self.__isFolder:
+            path = QFileDialog.getOpenFileName(self,'Indicate the path of the file')
+            if not self.__path:
+                self.__path = path[0]
+        else:
+            path = str(QFileDialog.getExistingDirectory(self, "Indicate the folder's path"))
+            if not self.__path:
+                self.__path = path
     def __changeComponent(self):
-        self.__isFolder = False if self.__isFolder else True
-        
-
+        #TRUE
+        if self.__isFolder:
+            self.__isFolder = False
+            self.__browse.setText("Indicate the path of the file")
+            self.__IsFolderBox.setText("Convert an entire path")
+        #FALSE
+        else:
+            self.__isFolder = True
+            self.__browse.setText("Indicate the folder's path")
 
     def __start(self):
-        self.__disablingButton()
-        self.__progressBar.setValue(25)
-        self.__progressBar.setFormat("Conversion in progress")
-        self.__progressBar.setAlignment(Qt.AlignCenter)
-        EntryPoint(path=self.__path, batch=self.__isFolder)
-        self.__progressBar.setValue(100)
-        self.__progressBar.setFormat("Conversion completed")
-        self.__ConversionCompleted()
+        if  self.__path == None or self.__path == "":
+            self.__customError("Undefined path")
+        else:
+            self.__disablingButton()
+            self.__progressBar.setValue(30)
+           # self.__progressBar.setFormat("Conversion in progress")
+            self.__progressBar.setAlignment(Qt.AlignCenter)
+            EntryPoint(path=self.__path, batch=self.__isFolder,cleanAnnots=self.__clearAnnots)
+            self.__progressBar.setValue(100)
+            self.__ConversionCompleted()
+            
+    
+    def __customError(self,txt):
+        msg = QMessageBox()
+        msg.setText(txt)
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.buttonClicked.connect(self.__restoreState)
+        x=msg.exec_()
 
     def __ConversionCompleted(self):
         msg = QMessageBox()
+        msg.setWindowTitle("Conversion completed")
         msg.setText("Conversion completed")
         msg.setIcon(QMessageBox.Information)
         msg.setStandardButtons(QMessageBox.Ok)
@@ -92,7 +127,7 @@ class MainWindow(QWidget):
         x=msg.exec_()
 
     def __restoreState(self):
-        self.__path = ""
+        self.__path = None
         self.__progressBar.setValue(0)
         self.__enablingButton()
     def __disablingButton(self):
@@ -102,5 +137,3 @@ class MainWindow(QWidget):
         for comp in self.__components:
             comp.setEnabled(True)
 
-
-        

@@ -1,11 +1,7 @@
 import os
 import re
-
 from docx import Document
 from docx.shared import Inches, Pt
-
-
-
 class DocxController:
     __doc = None
     __title = None
@@ -29,9 +25,8 @@ class DocxController:
 #optional parameters are required for the case where it is not batch
     def Save(self, batch = False, folder = None):
         if batch:
-            if os.path.isdir(folder+"DOCX"):
-                self.__doc.save(folder + "DOCX/" + self.__title.replace(folder,""))
-            else:
-                os.mkdir(folder+"DOCX")
+            if not os.path.isdir(folder+"/"+"DOCX"):
+                os.mkdir(folder+"/"+"DOCX")
+            self.__doc.save(folder + "/" + "DOCX/" + self.__title.replace(folder,""))
         else:
             self.__doc.save(self.__title)

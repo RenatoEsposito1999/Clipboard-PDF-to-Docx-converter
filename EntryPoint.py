@@ -2,7 +2,7 @@ from PdfController import PdfController
 from BatchPdfController import BatchPdfController
 
 class EntryPoint(): 
-    def __init__(self,path,batch) -> None:
+    def __init__(self,path,batch,cleanAnnots) -> None:
        
         if not batch:
             try:
@@ -10,7 +10,7 @@ class EntryPoint():
             except OSError as error:
                 print(error)
                 exit()
-            converter.convert()
+            converter.convert(cleanAnnot=cleanAnnots)
         else:
             batchController = BatchPdfController(path)
-            batchController.convert()
+            batchController.convert(cleanAnnot=cleanAnnots)
