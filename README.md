@@ -46,10 +46,8 @@ We get the following docx as output
 The graphical interface has not been treated in detail due to lack of time, it is minimalistic with few and simple instructions.
 Anyone who wants to update the graphical interface is welcome, all they have to do is work on the [MainWindow.py](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/MainWindow.py) class
 
-<div style="text-aling:center">
-<img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/gui.png
-" width="300" height="300">
-</div>
+<img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/gui.png" width="300" height="300">
+
 ### How to install all the necessary libraries
 In order to do this, it is necessary to go from the terminal to the "PDF-to-Docx-converter-with-annotations" folder and type the command:
 
