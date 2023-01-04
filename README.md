@@ -6,9 +6,9 @@
   - [Requirements](#Requirements-(by-downloading-the-.exe))
   - [Interface explanation](#interface-explanation)
   - [How to install all the necessary libraries](#how-to-install-all-the-necessary-libraries)
-- [License](#emphasis) 
-- [Contacts](#emphasis) 
-- [Emphasis](#emphasis) 
+- [License](#license)
+- [Contacts](#contacts) 
+
 ## Overview
 ***
 The goal of this software is to convert pdf files into docx files where:
