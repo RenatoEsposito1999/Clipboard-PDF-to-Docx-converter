@@ -2,7 +2,9 @@ import os
 import re
 from docx import Document
 from docx.shared import Inches, Pt
+import ProgressBarController
 class DocxController:
+    __nElement = None
     __doc = None
     __title = None
     def __init__(self,title):
@@ -11,7 +13,6 @@ class DocxController:
         #ADD only the name (not the path) without .docx extension
         self.__doc.add_heading(os.path.basename(re.sub(".docx","",self.__title)),level = 0)
         
-
 
     def InsertText(self,text):
         p = self.__doc.add_paragraph().add_run(text)
@@ -23,10 +24,15 @@ class DocxController:
         os.remove("./"+imageName)
 
 #optional parameters are required for the case where it is not batch
-    def Save(self, batch = False, folder = None):
+    def Save(self, batch = False, folder = None, nElements = None):
         if batch:
+            print(nElements)
+            print(int(100/nElements))
+            print()
             if not os.path.isdir(folder+"/"+"DOCX"):
                 os.mkdir(folder+"/"+"DOCX")
             self.__doc.save(folder + "/" + "DOCX/" + self.__title.replace(folder,""))
+            ProgressBarController.updateValue(int(100/nElements))
         else:
             self.__doc.save(self.__title)
+            ProgressBarController.updateValue(100)

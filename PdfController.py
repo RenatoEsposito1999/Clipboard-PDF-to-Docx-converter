@@ -40,10 +40,10 @@ class PdfController:
         self.__DocxController.InsertPhoto(name)
 
 #optional parameters are required for the case where it is not batch
-    def __closeDoc(self,batch = False, folder = None):
+    def __closeDoc(self,batch = False, folder = None, nElements = None):
         self.__PDFdoc.close()
         self.__orig_doc.close()
-        self.__DocxController.Save(batch,folder)
+        self.__DocxController.Save(batch,folder,nElements)
 
         
         

@@ -3,9 +3,11 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from EntryPoint import EntryPoint
+#from progressBarController import * 
+import ProgressBarController
 class MainWindow(QWidget):
     __path = None
-    __progressBar = None
+    #__progressBar = None
     __isFolder = False
     __browse = None
     __IsFolderBox = None
@@ -45,11 +47,12 @@ class MainWindow(QWidget):
 
     def __setProgressiveBar(self):
         #Progress bar
-        self.__progressBar = QProgressBar(self)
+        '''self.__progressBar = QProgressBar(self)
         self.__progressBar.setFixedSize(QtCore.QSize(230, 30))
 
         self.__progressBar.setValue(0)
-        self.__components.append(self.__progressBar)
+        self.__components.append(self.__progressBar)'''
+        self.__components.append(ProgressBarController.initBar())
         #I Create a thread to handle the updating
 
     def __setConvertButton(self):
@@ -101,11 +104,8 @@ class MainWindow(QWidget):
             self.__customError("Undefined path")
         else:
             self.__disablingButton()
-            self.__progressBar.setValue(30)
-           # self.__progressBar.setFormat("Conversion in progress")
-            self.__progressBar.setAlignment(Qt.AlignCenter)
             EntryPoint(path=self.__path, batch=self.__isFolder,cleanAnnots=self.__clearAnnots)
-            self.__progressBar.setValue(100)
+            ProgressBarController.updateValue(50)
             self.__ConversionCompleted()
             
     
@@ -128,7 +128,7 @@ class MainWindow(QWidget):
 
     def __restoreState(self):
         self.__path = None
-        self.__progressBar.setValue(0)
+        ProgressBarController.clearProgress()
         self.__enablingButton()
     def __disablingButton(self):
         for comp in self.__components:
