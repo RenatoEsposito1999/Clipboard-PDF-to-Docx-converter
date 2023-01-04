@@ -12,15 +12,16 @@ The image below shows just the final result.
 
 
 For example given the following pdf in input
-
+<p align="center">
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/pdf%20input.png" width="500" height="500">
+ </p>
 
 
 We get the following docx as output
 
-
+<p align="center">
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png" width="500" height="500">
-
+</p>
 **N.B**: It's possible through an option within the software to clean the images by eliminating the annotations before taking the screenshot, in this case we get the following output:
 
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docxoutputwithoutannots.png" width="500" height="500">
