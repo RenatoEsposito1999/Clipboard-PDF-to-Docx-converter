@@ -30,7 +30,7 @@ We get the following docx as output
 ***
 ### Requirements (by downloading the source code)
 - [Python > 3.9](https://www.python.org/downloads/)
-- [The necessary libraries](#How to install all the necessary libraries)
+- [The necessary libraries](#how-to-install-all-the-necessary-libraries)
 - [Visual Studio or any other editor](https://visualstudio.microsoft.com/it/downloads/)
 - [(Optional) GitHub Desktop](https://desktop.github.com/)
 
