@@ -1,5 +1,5 @@
 # PDF TO WORD CONVERTER
-## Overvie
+## Overview
 ***
 The goal of this software is to convert pdf files into docx files where:
 
@@ -37,5 +37,12 @@ We get the following docx as output
 ### Requirements (by downloading the .exe)
 ...
 
+
+## License ☢️
+PDF-to-Docx-converter-with-annotations is licensed under the GNU General Public License v3.0. Please, see the 
+[license](https://github.com/RenatoEsposito1999/AIWatch_C1/blob/main/LICENSE).
+
+## Contacts 🪪
+- [mail] renato [ dot ] esposito1999 [ at ] outlook [ dot ] com (you can write to me in english or italian).
 
 
