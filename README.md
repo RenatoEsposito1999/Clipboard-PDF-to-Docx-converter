@@ -1,14 +1,12 @@
-# PDF_TO_WORD
-PDF to Word Converter with Notes 
-Questo software permette di estrarre gli appunti scritti con applicazioni come Adobe Acrobat (o simili), che permettono quindi di inserire del testo sulla pagina del PDF. 
-Il funzionamento è il seguente:
-per ogni pagina del pdf vengono prima estratti gli appunti della pagina in analisi e poi viene effettuato uno screenshot a della pagina e incollata nel file docx subito dopo gli appunti
+# PDF TO WORD CONVERTER
+## Overview
+The goal of this software is to convert pdf files into docx files where:
 
-L'obiettivo di questo software è quello di convertire i file pdf in file docx dove:
-gli appunti sul pdf (presi con i normali software tipo Adobe Acrobat, Edge etc.) sono convertiti in testo modificable in word.
-La pagina pdf diventa un immagine in word.
-Il risultato finale è quindi un file docx modificabile dove per ogni pagina del pdf ci sarà una pagina docx con le annotazioni in formato testo ed uno screenshot della pagina pdf su cui si trovavano.
-L'immaggine che segue mostra appunto il risultato finale.
+ - Notes on the pdf (taken with normal software such as Adobe Acrobat,
+   Edge etc.) are converted into editable text in word. 
+- The pdf page becomes an image in word.
 
-!["The input pdf"](Resources/pdf inpu.png)
+The final result is then an editable docx file where for each page of the pdf there will be a docx page with the annotations in text format and a screenshot of the pdf page they were on.
+The image below shows just the final result.
+!["The input pdf"](Resources/pdf input.png)
 !["The output docx"](Resources/docx output.png)
