@@ -10,13 +10,12 @@ The final result is then an editable docx file where for each page of the pdf th
 The image below shows just the final result.
 
 
-The input pdf
-
+For example given the following pdf in input
 
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/pdf%20input.png" width="500" height="500">
 
 
-The output docx
+We get the following docx as output
 
 
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png" width="500" height="500">
