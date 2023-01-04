@@ -7,7 +7,6 @@ from EntryPoint import EntryPoint
 import ProgressBarController
 class MainWindow(QWidget):
     __path = None
-    #__progressBar = None
     __isFolder = False
     __browse = None
     __IsFolderBox = None
@@ -15,7 +14,7 @@ class MainWindow(QWidget):
     __components = []
     def __init__(self):
         super(MainWindow,self).__init__()
-        self.setWindowTitle("University Tool Helper")
+        self.setWindowTitle("PDF to Docx converter with annotations")
         self.setFixedWidth(300)
         self.setFixedHeight(300)
         layout = QGridLayout()
@@ -47,11 +46,6 @@ class MainWindow(QWidget):
 
     def __setProgressiveBar(self):
         #Progress bar
-        '''self.__progressBar = QProgressBar(self)
-        self.__progressBar.setFixedSize(QtCore.QSize(230, 30))
-
-        self.__progressBar.setValue(0)
-        self.__components.append(self.__progressBar)'''
         self.__components.append(ProgressBarController.initBar())
         #I Create a thread to handle the updating
 
