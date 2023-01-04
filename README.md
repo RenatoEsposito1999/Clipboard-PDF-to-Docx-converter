@@ -45,7 +45,6 @@ We get the following docx as output
 ### Requirements (by downloading the .exe)
 ...
 
-### Requirements (by downloading the .exe)
 
 ### Interface explanation
 **Brief preamble**
