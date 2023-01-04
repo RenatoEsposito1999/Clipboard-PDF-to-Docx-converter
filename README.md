@@ -1,7 +1,14 @@
 # PDF TO WORD CONVERTER
 ##### Table of Contents  
-[Overview](#overview)  
-[Emphasis](#emphasis) 
+- [Overview](#overview)  
+- [Instructions](#instructions)
+  - [Requirements](#requirements-(by-downloading-the-source-code))
+  - [Requirements](#Requirements-(by-downloading-the-.exe))
+  - [Interface explanation](#interface-explanation)
+  - [How to install all the necessary libraries](#how-to-install-all-the-necessary-libraries)
+- [License](#emphasis) 
+- [Contacts](#emphasis) 
+- [Emphasis](#emphasis) 
 ## Overview
 ***
 The goal of this software is to convert pdf files into docx files where:
@@ -38,9 +45,9 @@ We get the following docx as output
 ### Requirements (by downloading the .exe)
 ...
 
+### Requirements (by downloading the .exe)
+
 ### Interface explanation
-
-
 **Brief preamble**
 
 
@@ -55,6 +62,8 @@ Anyone who wants to update the graphical interface is welcome, all they have to 
 - **The third element**: allows you to select the pdf/folder containing the pdfs.
 - ** The fourth element**: start the conversion process. (**WARNING**: if the file extension is not pdf the process will do nothing)
 - **The last element**: is a bar that indicates the progress of the process.
+
+
 ### How to install all the necessary libraries
 In order to do this, it is necessary to go from the terminal to the "PDF-to-Docx-converter-with-annotations" folder and type the command:
 
