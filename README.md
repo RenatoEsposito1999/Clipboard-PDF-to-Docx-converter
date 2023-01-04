@@ -18,12 +18,10 @@ For example given the following pdf in input
 
 We get the following docx as output
 
-
-<img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png" width="500" height="500">
+<p align="center"><img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png" width="500" height="500"></p>
 
 **N.B**: It's possible through an option within the software to clean the images by eliminating the annotations before taking the screenshot, in this case we get the following output:
-
-<img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docxoutputwithoutannots.png" width="500" height="500">
+<p align="center"><img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docxoutputwithoutannots.png" width="500" height="500"></p>
 
 
 ## Instructions
@@ -45,8 +43,8 @@ We get the following docx as output
 
 The graphical interface has not been treated in detail due to lack of time, it is minimalistic with few and simple instructions.
 Anyone who wants to update the graphical interface is welcome, all they have to do is work on the [MainWindow.py](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/MainWindow.py) class
-bho provo a scrivere
-<img algin="right" src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/gui.png" width="150" height="150">
+
+<p align="center"><img algin="right" src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/gui.png" width="150" height="150"></p>
 
 ### How to install all the necessary libraries
 In order to do this, it is necessary to go from the terminal to the "PDF-to-Docx-converter-with-annotations" folder and type the command:
