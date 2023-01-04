@@ -40,7 +40,7 @@ We get the following docx as output
 
 ## License ☢️
 PDF-to-Docx-converter-with-annotations is licensed under the GNU General Public License v3.0. Please, see the 
-[license](https://github.com/RenatoEsposito1999/AIWatch_C1/blob/main/LICENSE).
+[license](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/LICENSE).
 
 ## Contacts 🪪
 - [mail] renato [ dot ] esposito1999 [ at ] outlook [ dot ] com (you can write to me in english or italian).
