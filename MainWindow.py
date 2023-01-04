@@ -3,7 +3,6 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from EntryPoint import EntryPoint
-#from progressBarController import * 
 import ProgressBarController
 class MainWindow(QWidget):
     __path = None
@@ -28,8 +27,7 @@ class MainWindow(QWidget):
         self.__setPathButton()
         self.__setConvertButton()
         self.__setProgressiveBar()
-        
-
+    
         for UIobj in self.__components:
             layout.addWidget(UIobj)
 
@@ -39,10 +37,8 @@ class MainWindow(QWidget):
         checkbox.clicked.connect(self.__changeClearAnnots)
         self.__components.append(checkbox)
 
-
     def __changeClearAnnots(self):
         self.__clearAnnots = False if self.__clearAnnots else True
-
 
     def __setProgressiveBar(self):
         #Progress bar
@@ -70,10 +66,9 @@ class MainWindow(QWidget):
         self.__browse.setFixedSize(QtCore.QSize(230, 30))
         self.__components.append(self.__browse)
 
-
     # Function to load Path 
     def __getPath(self):
-
+        self.__path = None
         if not self.__isFolder:
             path = QFileDialog.getOpenFileName(self,'Indicate the path of the file')
             if not self.__path:
@@ -130,4 +125,3 @@ class MainWindow(QWidget):
     def __enablingButton(self):
         for comp in self.__components:
             comp.setEnabled(True)
-
