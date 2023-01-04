@@ -22,4 +22,5 @@ The output docx
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png" width="500" height="500">
 
 **N.B**: It's possible through an option within the software to clean the images by eliminating the annotations before taking the screenshot, in this case we get the following output:
-<img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docxoutputwithoutannots.png" width="400" height="400">
+
+<img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docxoutputwithoutannots.png" width="500" height="500">
