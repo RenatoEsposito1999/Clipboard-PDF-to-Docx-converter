@@ -8,6 +8,6 @@ The goal of this software is to convert pdf files into docx files where:
 
 The final result is then an editable docx file where for each page of the pdf there will be a docx page with the annotations in text format and a screenshot of the pdf page they were on.
 The image below shows just the final result.
-!["The input pdf"](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png)
-!["The output docx"](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png)
-![alt text](Resources/docx output.png)
+![The input pdf](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/pdf%20input.png)
+![The output docx](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docx%20output.png =250x250)
+
