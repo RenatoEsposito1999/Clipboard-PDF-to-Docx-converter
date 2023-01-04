@@ -10,3 +10,4 @@ The final result is then an editable docx file where for each page of the pdf th
 The image below shows just the final result.
 !["The input pdf"](Resources/pdf input.png)
 !["The output docx"](Resources/docx output.png)
+![alt text](Resources/docx output.png)
