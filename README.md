@@ -41,6 +41,8 @@ We get the following docx as output
 
 
 **Brief preamble**
+
+
 The graphical interface has not been treated in detail due to lack of time, it is minimalistic with few and simple instructions.
 Anyone who wants to update the graphical interface is welcome, all they have to do is work on the [MainWindow.py](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/MainWindow.py) class
 
