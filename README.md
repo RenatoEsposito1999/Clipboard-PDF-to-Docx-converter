@@ -1,5 +1,6 @@
 # PDF TO WORD CONVERTER
-## Overview
+## Overvie
+***
 The goal of this software is to convert pdf files into docx files where:
 
  - Notes on the pdf (taken with normal software such as Adobe Acrobat,
@@ -23,3 +24,18 @@ We get the following docx as output
 **N.B**: It's possible through an option within the software to clean the images by eliminating the annotations before taking the screenshot, in this case we get the following output:
 
 <img src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/docxoutputwithoutannots.png" width="500" height="500">
+
+
+## Instructions
+***
+### Requirements (by downloading the source code)
+- [Python > 3.9](https://www.python.org/downloads/)
+- [The necessary libraries](https://www.python.org/downloads/)
+- [Visual Studio or any other editor](https://visualstudio.microsoft.com/it/downloads/)
+- [(Optional) GitHub Desktop](https://desktop.github.com/)
+
+### Requirements (by downloading the .exe)
+...
+
+
+
