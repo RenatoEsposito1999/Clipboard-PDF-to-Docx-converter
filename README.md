@@ -37,13 +37,14 @@ We get the following docx as output
 ## Instructions
 ***
 ### Requirements (by downloading the source code)
+- [The source code](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/releases/tag/PDF-to-Docx-converter-v1)
 - [Python > 3.9](https://www.python.org/downloads/)
 - [The necessary libraries](#how-to-install-all-the-necessary-libraries)
 - [Visual Studio or any other editor](https://visualstudio.microsoft.com/it/downloads/)
 - [(Optional) GitHub Desktop](https://desktop.github.com/)
 
 ### Requirements (by downloading the .exe)
-...
+- [.exe](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/releases/tag/PDF-to-Docx-converter-v1)
 
 
 ### Interface explanation
