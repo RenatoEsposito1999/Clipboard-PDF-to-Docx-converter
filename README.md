@@ -45,10 +45,10 @@ The graphical interface has not been treated in detail due to lack of time, it i
 Anyone who wants to update the graphical interface is welcome, all they have to do is work on the [MainWindow.py](https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/MainWindow.py) class
 
 <p align="center"><img algin="right" src="https://github.com/RenatoEsposito1999/PDF-to-Docx-converter-with-annotations/blob/main/Resources/gui.png" width="300" height="300"></p>
-- **The first checkbox**: if checked it will be possible to select an entire folder. This will be inspected and will convert all pdf's inside
-- **The first checkbox**: if checked it will delete the clipboard from the pdf page before taking the screenshot. 
 
-(**WARNING: this option will not modify the original pdf in any way so the notes will continue to be there at the end of the process**)
+
+- **The first checkbox**: if checked it will be possible to select an entire folder. This will be inspected and will convert all pdf's inside.
+- **The first checkbox**: if checked it will delete the clipboard from the pdf page before taking the screenshot. (**WARNING: this option will not modify the original pdf in any way so the notes will continue to be there at the end of the process**)
 
 ### How to install all the necessary libraries
 In order to do this, it is necessary to go from the terminal to the "PDF-to-Docx-converter-with-annotations" folder and type the command:
