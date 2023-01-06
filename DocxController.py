@@ -26,9 +26,6 @@ class DocxController:
 #optional parameters are required for the case where it is not batch
     def Save(self, batch = False, folder = None, nElements = None):
         if batch:
-            print(nElements)
-            print(int(100/nElements))
-            print()
             if not os.path.isdir(folder+"/"+"DOCX"):
                 os.mkdir(folder+"/"+"DOCX")
             self.__doc.save(folder + "/" + "DOCX/" + self.__title.replace(folder,""))
