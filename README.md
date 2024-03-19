@@ -11,7 +11,7 @@
 - [Contacts](#contacts) 
 
 ## Premises
-[UPDATE 2024] This project was developed rapidly, based on my skills and knowledge at the time. It's important to note that during development, I may not have strictly adhered to commonly accepted architectural patterns such as the Model-View-Controller (MVC) pattern.
+[UPDATE 2024] This project was developed rapidly, based on my skills and knowledge at the time (2022). It's important to note that during development, I may not have strictly adhered to commonly accepted architectural patterns such as the Model-View-Controller (MVC) pattern.
 
 The primary purpose of this project was to create a study support tool for university exams, with the aim of facilitating my own learning process and that of my peers. Therefore, the main focus was on implementing the necessary features to achieve this specific goal, rather than rigidly adhering to more complex design conventions.
 
