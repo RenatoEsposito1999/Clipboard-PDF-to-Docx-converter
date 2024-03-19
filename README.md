@@ -1,5 +1,6 @@
 # PDF TO WORD CONVERTER
-##### Table of Contents  
+##### Table of Contents
+- [Premises](#Premises)
 - [Overview](#overview)  
 - [Instructions](#instructions)
   - [Requirements](#requirements-(by-downloading-the-source-code))
@@ -8,6 +9,15 @@
   - [How to install all the necessary libraries](#how-to-install-all-the-necessary-libraries)
 - [License](#license)
 - [Contacts](#contacts) 
+
+## Premises
+This project was developed rapidly, based on my skills and knowledge at the time. It's important to note that during development, I may not have strictly adhered to commonly accepted architectural patterns such as the Model-View-Controller (MVC) pattern.
+
+The primary purpose of this project was to create a study support tool for university exams, with the aim of facilitating my own learning process and that of my peers. Therefore, the main focus was on implementing the necessary features to achieve this specific goal, rather than rigidly adhering to more complex design conventions.
+
+After a year of continuous use, I can confirm that this tool has fully achieved its sole creation objective. It has proven to be a valuable ally in studying, providing practical support throughout the academic journey.
+
+I hope that this project can be equally useful for other students in similar situations, providing them with an additional option to enhance the efficiency and effectiveness of their learning process.
 
 ## Overview
 ***
