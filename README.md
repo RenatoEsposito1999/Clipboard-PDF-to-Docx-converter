@@ -11,9 +11,15 @@
 - [Contacts](#contacts) 
 
 ## Premises
-[UPDATE 2024] This project was developed rapidly, based on my skills and knowledge at the time. It's important to note that during development, I may not have strictly adhered to commonly accepted architectural patterns such as the Model-View-Controller (MVC) pattern.
+[UPDATE 2024] 
+Certainly, here's the revised section with the addition regarding the graphical user interface:
+
+Premises
+This project was developed rapidly, based on my skills and knowledge at the time. It's important to note that during development, I may not have strictly adhered to commonly accepted architectural patterns such as the Model-View-Controller (MVC) pattern.
 
 The primary purpose of this project was to create a study support tool for university exams, with the aim of facilitating my own learning process and that of my peers. Therefore, the main focus was on implementing the necessary features to achieve this specific goal, rather than rigidly adhering to more complex design conventions.
+
+Due to the rapid development cycle and the focus on functionality, the graphical user interface (GUI) may not have been meticulously polished. It was functional and aimed at providing a straightforward user experience, but detailed design considerations were not prioritized.
 
 After a year of continuous use, I can confirm that this tool has fully achieved its sole creation objective. It has proven to be a valuable ally in studying, providing practical support throughout the academic journey.
 
